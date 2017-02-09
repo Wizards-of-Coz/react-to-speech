@@ -74,6 +74,7 @@ class CozmoReact(WOC):
     emotionScale = 0
     
     
+    
     def __init__(self, *a, **kw):
         
         self.cl = NaiveBayesClassifier(self.train)
@@ -175,11 +176,6 @@ class CozmoReact(WOC):
      
     def react(self,emotion):
         self.coz.play_anim(random.choice(self.reactionDict[emotion]["emo"])).wait_for_completed()
-        
-
-
-    def speak(self,text):
-        system("say '"+text+"' -v Alex -r 200")
         
 
         
