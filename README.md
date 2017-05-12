@@ -3,7 +3,7 @@
 This is a linear experience about evaluating speech as a form of Input to Cozmo. Players can call out to cozmo and he will look for your face to begin interacting with you. He will analyse your speech and react accordingly. For example, “I hate you” evokes sad emotions from cozmo and saying “I’m sorry” or “I’ve missed you” makes him happy.
 
 ## Video
-https://www.youtube.com/watch?list=PLiWWaMjaY89MVIFR2vFqOSwl38NSUGrOI&v=oH928CbpIqM
+https://www.youtube.com/watch?v=oH928CbpIqM
 
 ## Implementation Details
 Cozmo SDK’s “cozmo.behavior.BehaviorTypes.FindFaces” is used when the user calls out “Cozmo” or “Buddy” to start the experience. He looks for a face and when he finds one, he starts listening for speech input. Python’s Speech Recognition library is used to process player speech input. The processed speech is sent to Python’s NLP Toolkit that analyzes the sentence based on a training data set and classifies it into a positive or negative emotion (a fraction between -1 and 1). Based on this, Cozmo reacts with an appropriate animation.
